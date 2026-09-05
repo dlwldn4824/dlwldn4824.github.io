@@ -1,10 +1,10 @@
 :root {
-  --ink: #123056;
-  --blue: #1f5fbf;
-  --mute: #5d7390;
-  --line: #d5e2f2;
-  --paper: #ffffff;
-  --sheet: #f3f7fc;
+  --ink: #111;
+  --blue: #1a56c4;
+  --mute: #666;
+  --line: #e5e5e5;
+  --paper: #fff;
+  --sheet: #fff;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
