@@ -1,20 +1,23 @@
 :root {
-  --ink: #1a1714;
-  --mute: #5c564e;
-  --line: #d9d1c4;
-  --paper: #f4efe6;
-  --sheet: #fffcf6;
+  --ink: #123056;
+  --blue: #1f5fbf;
+  --mute: #5d7390;
+  --line: #d5e2f2;
+  --paper: #ffffff;
+  --sheet: #f3f7fc;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--ink);
   background: var(--paper);
   line-height: 1.7;
   font-size: 16.5px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
-a { color: inherit; }
+a { color: var(--blue); }
 img { max-width: 100%; display: block; }
 
 .mast, section, footer {
@@ -24,20 +27,20 @@ img { max-width: 100%; display: block; }
 }
 .mast { padding-top: 64px; padding-bottom: 36px; }
 .name {
-  font-family: "Noto Serif KR", serif;
   font-size: clamp(42px, 8vw, 72px);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-weight: 800;
+  letter-spacing: -0.05em;
   line-height: 1.05;
+  color: var(--ink);
   padding-bottom: 18px;
-  border-bottom: 3px solid var(--ink);
+  border-bottom: 3px solid var(--blue);
 }
 .name span {
   display: inline-block;
   margin-left: 12px;
   font-size: 0.42em;
   font-weight: 600;
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   color: var(--mute);
   vertical-align: middle;
 }
@@ -45,6 +48,7 @@ img { max-width: 100%; display: block; }
   margin-top: 22px;
   max-width: 40em;
   font-size: 17px;
+  font-weight: 500;
 }
 .links {
   margin-top: 16px;
@@ -52,6 +56,7 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   gap: 8px 18px;
   font-size: 14.5px;
+  font-weight: 500;
 }
 .links a, nav a, .meta a, .edu a, footer a {
   text-decoration: underline;
@@ -63,15 +68,21 @@ nav {
   display: flex;
   gap: 20px;
   font-size: 14px;
+  font-weight: 600;
 }
-nav a { text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blue);
+  padding-bottom: 1px;
+}
 
 section { padding-top: 8px; padding-bottom: 48px; }
 h1 {
-  font-family: "Noto Serif KR", serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+  color: var(--blue);
   margin-bottom: 18px;
 }
 .note { font-size: 14px; color: var(--mute); margin-bottom: 36px; }
@@ -88,10 +99,10 @@ h1 {
 }
 .awards li:last-child { border-bottom: 1px solid var(--line); }
 .awards b {
-  font-family: "Noto Serif KR", serif;
   font-weight: 700;
+  color: var(--blue);
 }
-.awards time { font-size: 13px; color: var(--mute); }
+.awards time { font-size: 13px; color: var(--mute); font-weight: 500; }
 @media (max-width: 640px) {
   .awards li { grid-template-columns: 3.6rem 1fr; }
   .awards time { grid-column: 1; grid-row: 2; }
@@ -100,18 +111,18 @@ h1 {
 
 .case {
   padding: 36px 0 8px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line);
 }
 .case h2 {
-  font-family: "Noto Serif KR", serif;
   font-size: clamp(26px, 4vw, 34px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 800;
+  letter-spacing: -0.04em;
   line-height: 1.2;
+  color: var(--ink);
 }
-.meta { font-size: 14px; color: var(--mute); margin: 6px 0 14px; }
+.meta { font-size: 14px; color: var(--mute); margin: 6px 0 14px; font-weight: 500; }
 .case > p { max-width: 40em; }
-.did { margin-top: 8px; }
+.did { margin-top: 8px; font-weight: 500; }
 
 .figs {
   display: grid;
@@ -125,7 +136,7 @@ h1 {
 .figs figure {
   background: var(--sheet);
   padding: 10px 10px 12px;
-  box-shadow: 0 1px 0 rgba(26,23,20,.08);
+  border: 1px solid var(--line);
 }
 .figs img { width: 100%; height: auto; }
 figcaption {
@@ -133,6 +144,7 @@ figcaption {
   font-size: 13px;
   color: var(--mute);
   line-height: 1.45;
+  font-weight: 500;
 }
 .figs-poster { grid-template-columns: minmax(160px, 280px) 1fr; align-items: start; }
 .figs-yanggu { grid-template-columns: 1.4fr .9fr; align-items: start; }
@@ -147,7 +159,7 @@ figcaption {
   font-size: 15.5px;
   color: var(--mute);
 }
-.lead b { display: block; color: var(--ink); font-weight: 650; }
+.lead b { display: block; color: var(--ink); font-weight: 700; }
 .journey { margin-top: 28px; }
 .journey img {
   width: 100%;
@@ -164,7 +176,7 @@ footer {
   gap: 12px;
   flex-wrap: wrap;
   padding: 22px 28px 48px;
-  border-top: 3px solid var(--ink);
+  border-top: 3px solid var(--blue);
   font-size: 13.5px;
   color: var(--mute);
 }
