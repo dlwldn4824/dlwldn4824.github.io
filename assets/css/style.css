@@ -109,20 +109,64 @@ h1 {
   .awards span { grid-column: 2; grid-row: 1 / span 2; }
 }
 
-.case {
-  padding: 36px 0 8px;
+.work-list { list-style: none; }
+.work-list a {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr auto;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 0;
   border-top: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
 }
-.case h2 {
-  font-size: clamp(26px, 4vw, 34px);
+.work-list li:last-child a { border-bottom: 1px solid var(--line); }
+.work-list b {
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 14px;
+}
+.work-list em {
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mute);
+}
+.work-list a:hover span { color: var(--blue); }
+@media (max-width: 640px) {
+  .work-list a { grid-template-columns: 3.6rem 1fr; }
+  .work-list em { display: none; }
+}
+
+.sub {
+  padding-top: 36px;
+}
+.back {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.back a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blue);
+}
+.page-title {
+  font-size: clamp(32px, 6vw, 48px);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--ink);
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--blue);
+  margin-bottom: 12px;
 }
+.sub .lede { margin-top: 16px; }
 .meta { font-size: 14px; color: var(--mute); margin: 6px 0 14px; font-weight: 500; }
-.case > p { max-width: 40em; }
-.did { margin-top: 8px; font-weight: 500; }
+.did { margin-top: 8px; margin-bottom: 8px; font-weight: 500; }
+.sub p { max-width: 40em; }
 
 .figs {
   display: grid;
